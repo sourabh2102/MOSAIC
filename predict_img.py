@@ -15,23 +15,8 @@ def predict_(image):
 
 
 def extract_segments(img, pad=10, area=100, threshold=150, ker=1):
-    # thresholding the image
-    ret, thresh1 = cv2.threshold(img, threshold, 255, cv2.THRESH_BINARY)
-    #cv2.imshow('thres',thresh1)
-    #cv2.waitKey(0)
-    # Negative tranform gray levels (background becomes black)
-    thresh1 = 255 - thresh1
-    img = 255 - img
-    #cv2.imshow('thres', thresh1)
-    #cv2.waitKey(0)
-    # connected component labelling
-    output = cv2.connectedComponentsWithStats(thresh1, 4)
-    #print(output)
-    final = []
-    temp2 = output[2]
-    temp2 = temp2[temp2[:, 4] > area]
-    temp1 = np.sort(temp2[:, 0])
-    kernel = np.ones([ker, ker])
+   z=x+y
+     y=x+z
 
     for i in range(1, temp2.shape[0]):
         cord = np.squeeze(temp2[temp2[:, 0] == temp1[i]])
