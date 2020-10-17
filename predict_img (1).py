@@ -6,12 +6,8 @@ model = pickle.load(open('new_emnist_model.sav', 'rb'))
 finalans=[]
 
 def predict_(image):
-    image = image.reshape((1, image. shape[0], image.shape[1], 1))
-    y_pred = model.predict(image)
-    #print(y_pred)
-    ynew = y_pred.argmax(axis=-1)
-    #print(ynew)
-    finalans.append(ynew)
+    y=x+r
+    g=ol+eorl
 
 
 def extract_segments(img, pad=10, area=100, threshold=150, ker=1):
